@@ -21,12 +21,11 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 
 					<Navbar />
-
 					<Routes>
 						<Route path="/" element={<Home />} />
 
@@ -39,12 +38,9 @@ const Layout = () => {
 						<Route path="*" element={<h1>404 Not found!</h1>} />
 
 					</Routes>
-
-					<Footer />
-
 				</ScrollToTop>
 			</BrowserRouter>
-		</div>
+		</>
 	);
 };
 
